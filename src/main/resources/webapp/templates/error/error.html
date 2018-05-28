@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="#{title} + '错误'"></title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!--<link rel="shortcut icon" href="img/favicon.png">-->
+
+    <title th:text="#{title}">错误</title>
+
+    <!-- Bootstrap CSS -->
+    <link th:href="@{/static/bootstrap-4.0.0-dist/css/bootstrap.min.css}" rel="stylesheet"/>
+    <!-- bootstrap theme -->
+    <!--<link href="css/bootstrap-theme.css" rel="stylesheet">-->
+
+    <!--<link href="css/elegant-icons-style.css" rel="stylesheet" />-->
+    <link th:href="@{/static/fontawesome/css/fontawesome.min.css}" rel="stylesheet" />
+
+    <script type="text/javascript" th:src="@{/static/jquery/jquery-3.3.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/static/popper/popper.min.js}"></script>
+    <script type="text/javascript" th:src="@{/static/bootstrap-4.0.0-dist/js/bootstrap.min.js}"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" th:src="@{/static/html5shiv/html5shiv.min.js}"></script>
+    <script type="text/javascript" th:src="@{/static/respond/respond.min.js}"></script>
+    <![endif]-->
+
+    <style>
+        body {
+
+            color: #797979;
+
+            background: #eeeeee;
+
+            font-family: 'Lato', sans-serif;
+
+            padding: 0px !important;
+
+            margin: 0px !important;
+
+            font-size:14px !important;
+
+        }
+
+        h1,h2,h3,h4,h5{
+
+            font-weight: 300;
+
+        }
+
+        .page-404{
+
+            position:relative;
+
+            width:350px;
+
+            height:200px;
+
+            margin:100px auto;
+
+            text-align: center;
+
+        }
+
+
+
+        .text-404{
+
+            font-size:138px;
+
+            background:#e9e3dd;
+
+            background-repeat: no-repeat;
+
+            background-size: 200% 200%;
+
+            background-position: 100% 100%;
+
+            -webkit-animation: square 3s linear infinite;
+
+            -ms-animation: square 3s linear infinite;
+
+            animation: square 3s linear infinite;
+
+            -webkit-background-clip: text;
+
+            color:transparent;
+
+            text-align:center;
+
+            line-height:200px;
+
+            position:relative;
+
+        }
+
+
+
+        .text-404:nth-of-type(2){
+
+            text-shadow:none;
+
+            z-index:2;
+
+            position:absolute;
+
+            top:-139px;
+
+            left:-1px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="page-404">
+        <p class="text-404" th:text="${errorCode}">404</p>
+        <h2>出现错误!</h2>
+        <p><span th:text="${msg}"></span><br/><a href="index.html" th:href="@{/index}">返回首页</a></p>
+    </div>
+</body>
+</html>
